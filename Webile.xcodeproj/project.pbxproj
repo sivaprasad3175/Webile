@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		47F1F41722F0832200178E4F /* Webile.h in Headers */ = {isa = PBXBuildFile; fileRef = 47F1F41522F0832200178E4F /* Webile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47F1F41E22F084F200178E4F /* WebilePlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F1F41D22F084F200178E4F /* WebilePlaces.swift */; };
+		EB712C8F610BCBF09631FB5C /* libPods-Webile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B368AE2E20EEA63B7372E2CF /* libPods-Webile.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BF19495E84724509C57C152 /* Pods-Webile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webile.release.xcconfig"; path = "Target Support Files/Pods-Webile/Pods-Webile.release.xcconfig"; sourceTree = "<group>"; };
 		47F1F41222F0832200178E4F /* Webile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Webile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F1F41522F0832200178E4F /* Webile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Webile.h; sourceTree = "<group>"; };
 		47F1F41622F0832200178E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47F1F41D22F084F200178E4F /* WebilePlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebilePlaces.swift; sourceTree = "<group>"; };
+		AD97374D98A4F330C0B2B09A /* Pods-Webile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webile.debug.xcconfig"; path = "Target Support Files/Pods-Webile/Pods-Webile.debug.xcconfig"; sourceTree = "<group>"; };
+		B368AE2E20EEA63B7372E2CF /* libPods-Webile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Webile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB712C8F610BCBF09631FB5C /* libPods-Webile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +39,8 @@
 			children = (
 				47F1F41422F0832200178E4F /* Webile */,
 				47F1F41322F0832200178E4F /* Products */,
+				DD35052AA67D84EA0A68CD24 /* Pods */,
+				FC29ED511E2C09D34E2A724C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,8 +57,26 @@
 			children = (
 				47F1F41522F0832200178E4F /* Webile.h */,
 				47F1F41622F0832200178E4F /* Info.plist */,
+				47F1F41D22F084F200178E4F /* WebilePlaces.swift */,
 			);
 			path = Webile;
+			sourceTree = "<group>";
+		};
+		DD35052AA67D84EA0A68CD24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD97374D98A4F330C0B2B09A /* Pods-Webile.debug.xcconfig */,
+				0BF19495E84724509C57C152 /* Pods-Webile.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC29ED511E2C09D34E2A724C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B368AE2E20EEA63B7372E2CF /* libPods-Webile.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,10 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47F1F41A22F0832200178E4F /* Build configuration list for PBXNativeTarget "Webile" */;
 			buildPhases = (
+				7A6A2B9DBE5A0DD0C74E4883 /* [CP] Check Pods Manifest.lock */,
 				47F1F40D22F0832200178E4F /* Headers */,
 				47F1F40E22F0832200178E4F /* Sources */,
 				47F1F40F22F0832200178E4F /* Frameworks */,
 				47F1F41022F0832200178E4F /* Resources */,
+				F11D0C8BFE55F4F333E58292 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -95,6 +124,7 @@
 				TargetAttributes = {
 					47F1F41122F0832200178E4F = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -125,11 +155,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A6A2B9DBE5A0DD0C74E4883 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Webile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F11D0C8BFE55F4F333E58292 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Webile/Pods-Webile-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Webile/Pods-Webile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		47F1F40E22F0832200178E4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47F1F41E22F084F200178E4F /* WebilePlaces.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +340,9 @@
 		};
 		47F1F41B22F0832200178E4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD97374D98A4F330C0B2B09A /* Pods-Webile.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -277,6 +359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Demo.Webile;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,7 +367,9 @@
 		};
 		47F1F41C22F0832200178E4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BF19495E84724509C57C152 /* Pods-Webile.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
